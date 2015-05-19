@@ -6,7 +6,7 @@ class AdminUsers < ActiveRecord::Migration
       t.string  :password
       t.string  :password_digest
 
-      t.timestanps  null: false
+      t.timestamps  null: false
     end
   end
 end

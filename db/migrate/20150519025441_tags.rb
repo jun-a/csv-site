@@ -3,7 +3,7 @@ class Tags < ActiveRecord::Migration
     create_table  :tag  do |t|
       t.string  :name
 
-      t.timestanps  null: false
+      t.timestamps  null: false
     end
   end
 end

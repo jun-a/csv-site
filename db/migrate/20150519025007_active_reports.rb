@@ -11,7 +11,7 @@ class ActiveReports < ActiveRecord::Migration
       t.references  :client_user
       #t.references imageがここに入るかも  
 
-      t.timestanps   null: false
+      t.timestamps   null: false
     end
   end
 end

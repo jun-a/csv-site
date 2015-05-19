@@ -9,7 +9,7 @@ class SupporterVoices < ActiveRecord::Migration
       t.references  :client_user
       t.references  :category
 
-      t.timestanps  null: false
+      t.timestamps  null: false
     end
   end
 end

@@ -7,7 +7,7 @@ class ClientUsers < ActiveRecord::Migration
       t.string  :password_digest
       t.references  :client
 
-      t.timestanps  null: false
+      t.timestamps  null: false
     end
   end
 end

@@ -8,7 +8,7 @@ class Images < ActiveRecord::Migration
       t.references  :donation
       t.references  :client_user
 
-      t.timestanps  null: false
+      t.timestamps  null: false
     end
   end
 end

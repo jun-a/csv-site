@@ -9,7 +9,7 @@ class Clients < ActiveRecord::Migration
       t.string  :client_manager #クライアントの担当者
       t.string  :contract_status  #リジョブとの契約関係
 
-      t.timestanps  null: false
+      t.timestamps  null: false
     end
   end
 end

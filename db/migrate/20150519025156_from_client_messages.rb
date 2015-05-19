@@ -5,7 +5,7 @@ class FromClientMessages < ActiveRecord::Migration
       t.references  :client_user
       t.references  :client
 
-      t.timestanps  null: false
+      t.timestamps  null: false
     end
   end
 end
