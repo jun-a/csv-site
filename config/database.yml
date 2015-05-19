@@ -22,7 +22,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: csv-sample_test
+  database: csv_sample_test
 
 production:
   <<: *default
