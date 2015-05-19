@@ -1,6 +1,6 @@
 class ActiveReports < ActiveRecord::Migration
   def change
-    create_table  :active_reports do  |t|
+    create_table  :active_reports do |t|
       t.string  :title
       t.text  :content
       t.text  :comment

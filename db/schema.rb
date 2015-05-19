@@ -11,18 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519025454) do
-
-  create_table "Images", force: :cascade do |t|
-    t.binary   "image",            limit: 65535
-    t.integer  "active_report_id", limit: 4
-    t.integer  "client_id",        limit: 4
-    t.integer  "support_voice_id", limit: 4
-    t.integer  "donation_id",      limit: 4
-    t.integer  "client_user_id",   limit: 4
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-  end
+ActiveRecord::Schema.define(version: 20150519065050) do
 
   create_table "active_reports", force: :cascade do |t|
     t.string   "title",              limit: 255
@@ -46,7 +35,7 @@ ActiveRecord::Schema.define(version: 20150519025454) do
     t.datetime "updated_at",                  null: false
   end
 
-  create_table "category", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
@@ -74,14 +63,35 @@ ActiveRecord::Schema.define(version: 20150519025454) do
     t.datetime "updated_at",                   null: false
   end
 
+  create_table "donation_pay_methods", force: :cascade do |t|
+    t.string   "donation_pay_method", limit: 255
+    t.integer  "client_id",           limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  create_table "donation_purposes", force: :cascade do |t|
+    t.string   "donation_purpose", limit: 255
+    t.integer  "client_id",        limit: 4
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
   create_table "donations", force: :cascade do |t|
-    t.string  "employee_name",       limit: 255
-    t.integer "price_per_employee",  limit: 4
-    t.string  "donations_purpose",   limit: 255
-    t.string  "donation_pay_method", limit: 255
-    t.integer "client_user_id",      limit: 4
-    t.integer "client_id",           limit: 4
-    t.text    "donation_message",    limit: 65535
+    t.integer "price_per_employee", limit: 4
+    t.integer "client_user_id",     limit: 4
+    t.integer "client_id",          limit: 4
+    t.text    "donation_message",   limit: 65535
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.integer  "age",             limit: 4
+    t.string   "sex",             limit: 255
+    t.string   "client_position", limit: 255
+    t.integer  "client_id",       limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "from_client_messages", force: :cascade do |t|
@@ -90,6 +100,17 @@ ActiveRecord::Schema.define(version: 20150519025454) do
     t.integer  "client_id",       limit: 4
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.binary   "image",            limit: 65535
+    t.integer  "active_report_id", limit: 4
+    t.integer  "client_id",        limit: 4
+    t.integer  "support_voice_id", limit: 4
+    t.integer  "donation_id",      limit: 4
+    t.integer  "client_user_id",   limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "supporter_voices", force: :cascade do |t|
@@ -104,7 +125,7 @@ ActiveRecord::Schema.define(version: 20150519025454) do
     t.datetime "updated_at",                     null: false
   end
 
-  create_table "tag", force: :cascade do |t|
+  create_table "tags", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false

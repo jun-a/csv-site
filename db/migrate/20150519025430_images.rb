@@ -1,6 +1,6 @@
 class Images < ActiveRecord::Migration
   def change
-    create_table  :Images do |t|
+    create_table  :images do |t|
       t.binary  :image
       t.references  :active_report
       t.references  :client
