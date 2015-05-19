@@ -12,14 +12,13 @@
 
 #emailに書き直し,contact_statusは別テーブルへ
 #Clientを50個作成
-  10.times do |number|
+  15.times do |number|
     Client.create(name:"client#{number}",
-                  address:"東京都港区1-#{number}-#{number+2}",
+                  address:"東京都港区1-#{number}-#{number + 2}",
                   tel_number:"03-2324-321#{number}", 
                   email:"client#{number}@sample#{number}.com", 
                   client_president:"鈴木#{number}郎",
-                  client_manager:"佐藤#{10 - number}郎"
-                  ) 
+                  client_manager:"佐藤#{10 - number}郎") 
   end
 
 #supporter_voiceを作成
@@ -28,7 +27,9 @@
 
 #Donationの作成
   10.times do |number|
-    Donation.create(employee_name:"member-#{number}", price_per_employee: number * 1000, donation_message:"good luck! for #{number}")
+    Donation.create(employee_name:"member-#{number}", 
+                    price_per_employee: number * 1000, 
+                    donation_message:"good luck! for #{number}")
   end
 
 #Client_userを10個追加
@@ -74,6 +75,15 @@
   Donation_pay_method.create(name:"口座振替")
   Donation_pay_method.create(name:"請求書発行")   
 
+#Sexの作成
+  Sex.create(name:"男")
+  Sex.create(name:"女")
+  Sex.create(name:"その他")
+
+#Contract_statusの作成
+  Contract_status.create(name:"法人(新規)")
+  Contract_status.create(name:"法人(既存の取引あり)")
+  Contract_status.create(name:"")
 
 
 

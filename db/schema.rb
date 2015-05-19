@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519065050) do
+ActiveRecord::Schema.define(version: 20150519072307) do
 
   create_table "active_reports", force: :cascade do |t|
     t.string   "title",              limit: 255
@@ -52,15 +52,19 @@ ActiveRecord::Schema.define(version: 20150519065050) do
   end
 
   create_table "clients", force: :cascade do |t|
-    t.string   "name",             limit: 255
-    t.string   "address",          limit: 255
-    t.string   "tel_number",       limit: 255
-    t.string   "mail",             limit: 255
-    t.string   "client_president", limit: 255
-    t.string   "client_manager",   limit: 255
-    t.string   "contract_status",  limit: 255
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.string   "name",               limit: 255
+    t.string   "address",            limit: 255
+    t.string   "tel_number",         limit: 255
+    t.string   "email",              limit: 255
+    t.string   "client_president",   limit: 255
+    t.string   "client_manager",     limit: 255
+    t.integer  "contract_status_id", limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "contract_statuses", force: :cascade do |t|
+    t.string "contract_status", limit: 255
   end
 
   create_table "donation_pay_methods", force: :cascade do |t|
@@ -87,7 +91,6 @@ ActiveRecord::Schema.define(version: 20150519065050) do
   create_table "employees", force: :cascade do |t|
     t.string   "name",            limit: 255
     t.integer  "age",             limit: 4
-    t.string   "sex",             limit: 255
     t.string   "client_position", limit: 255
     t.integer  "client_id",       limit: 4
     t.datetime "created_at",                  null: false
@@ -111,6 +114,13 @@ ActiveRecord::Schema.define(version: 20150519065050) do
     t.integer  "client_user_id",   limit: 4
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+  end
+
+  create_table "sexes", force: :cascade do |t|
+    t.string   "sex",         limit: 255
+    t.integer  "employee_id", limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "supporter_voices", force: :cascade do |t|
