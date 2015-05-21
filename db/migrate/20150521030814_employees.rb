@@ -1,4 +1,4 @@
-class Employee < ActiveRecord::Migration
+class Employees < ActiveRecord::Migration
   def change
     create_table  :employees  do |t|
       t.string  :name
@@ -10,3 +10,4 @@ class Employee < ActiveRecord::Migration
     end
   end
 end
+

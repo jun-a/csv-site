@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519072307) do
+ActiveRecord::Schema.define(version: 20150521030814) do
 
   create_table "active_reports", force: :cascade do |t|
     t.string   "title",              limit: 255
