@@ -8,6 +8,7 @@ gem 'sqlite3'
 
 #追加gem
 gem 'mysql2'
+gem 'rubocop'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

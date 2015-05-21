@@ -1,2 +1,2 @@
-class ContractStatuses < ActiveRecord::Migration
+class ContractStatus < ActiveRecord::Base
 end

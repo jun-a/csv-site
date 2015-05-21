@@ -1,2 +1,2 @@
-class Image < ActiveRecord::Migration
+class Image < ActiveRecord::Base
 end

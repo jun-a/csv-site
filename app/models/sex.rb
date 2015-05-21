@@ -1,2 +1,2 @@
-class Sexe < ActiveRecord::Migration
+class Sex < ActiveRecord::Base
 end

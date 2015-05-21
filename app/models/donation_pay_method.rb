@@ -1,2 +1,2 @@
-class DonationPayMethods < ActiveRecord::Migration
+class DonationPayMethod < ActiveRecord::Base
 end

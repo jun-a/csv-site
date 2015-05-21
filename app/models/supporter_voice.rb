@@ -1,3 +1,3 @@
-class SupporterVoice < ActiveRecord::Migration
+class SupporterVoice < ActiveRecord::Base
 
 end

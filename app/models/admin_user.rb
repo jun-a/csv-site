@@ -1,2 +1,2 @@
-class AdminUsers < ActiveRecord::Migration
+class AdminUser < ActiveRecord::Base
 end

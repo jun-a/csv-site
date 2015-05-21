@@ -1,3 +1,3 @@
-class ActiveReport < ActiveRecord::Migration
+class ActiveReport < ActiveRecord::Base
 
 end

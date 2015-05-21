@@ -1,2 +1,2 @@
-class Tag < ActiveRecord::Migration
+class Tag < ActiveRecord::Base
 end

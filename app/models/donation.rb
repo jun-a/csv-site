@@ -1,3 +1,3 @@
-class Donation < ActiveRecord::Migration
+class Donation < ActiveRecord::Base
 
 end

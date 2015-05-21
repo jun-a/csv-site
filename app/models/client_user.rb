@@ -1,3 +1,3 @@
-class ClientUser < ActiveRecord::Migration
+class ClientUser < ActiveRecord::Base
 
 end

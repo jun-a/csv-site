@@ -1,2 +1,2 @@
-class Employee < ActiveRecord::Migration
+class Employee < ActiveRecord::Base
 end
