@@ -6,6 +6,7 @@ class ClientUsers < ActiveRecord::Migration
       t.string  :password
       t.string  :password_digest
       t.references  :client
+      t.references :image
 
       t.timestamps  null: false
     end
